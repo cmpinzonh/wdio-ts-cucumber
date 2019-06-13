@@ -10,14 +10,9 @@
     "lint": "tslint --fix src/**/*.ts",
     "moveJsonFiles": "copyfiles -u 1 src/selectors/* src/config/* lib"
   },
-  "pre-commit": [
-    "lint",
-    "build",
-    "test"
-  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jdavis61/webdriverio-typescript-examples.git"
+    "url": "https://github.com/cmpinzonh/wdio-ts-cucumber"
   },
   "keywords": [
     "webdriverio",
@@ -26,15 +21,13 @@
     "ts",
     "typescript"
   ],
-  "author": "James Davis",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jdavis61/webdriverio-typescript-examples/issues"
-  },
-  "homepage": "https://github.com/jdavis61/webdriverio-typescript-examples#readme",
+  "author": "Miguel Pinzón",
+  "license": "MIT",
   "dependencies": {
     "@types/mocha": "^5.2.7",
     "cucumber-pretty": "^1.5.2",
+    "tslint": "^5.17.0",
+    "tslint-config-airbnb": "^5.11.1",
     "webdriverio": "^5.10.1"
   },
   "devDependencies": {

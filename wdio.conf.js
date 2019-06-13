@@ -131,7 +131,7 @@ exports.config = {
         compiler: [
             'ts:ts-node/register',
         ],
-        format: [require.resolve('cucumber-pretty')],
+        format: 'summary',
         // <boolean< Treat ambiguous definitions as errors
         failAmbiguousDefinitions: true,
         // <boolean> invoke formatters without executing steps
@@ -152,8 +152,7 @@ exports.config = {
         profile: [],
         // <string[]> (file/dir) require files before executing features
         require: [
-            './dist/features/**/*.js',
-            './dist/page/*.js'
+            './dist/**/*.js'
             // Or search a (sub)folder for JS files with a wildcard
             // works since version 1.1 of the wdio-cucumber-framework
             //'./src/**/*.js',
@@ -202,7 +201,6 @@ exports.config = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
     before: function () {
-        browser.maximizeWindow();
         var chai = require('chai');
         chai.Should();
 

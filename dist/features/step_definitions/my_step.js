@@ -20,6 +20,7 @@ cucumber_1.Given('I go to {string}', function (site) {
 });
 cucumber_1.When('I check the title', function () {
     return __awaiter(this, void 0, void 0, function* () {
+        yield browser.pause(0);
     });
 });
 cucumber_1.Then('I should see the title', function () {

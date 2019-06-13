@@ -1,5 +1,5 @@
 const assert = require('assert');
-import { Given, When, Then} from 'cucumber';
+import { Given, When, Then } from 'cucumber';
 import { GooglePage, MenuContentPage } from '../../page';
 
 // const googlePage: GooglePage = new GooglePage();
@@ -10,7 +10,7 @@ Given('I go to {string}', async function (site) {
 });
 
 When('I check the title', async function () {
-
+  await browser.pause(0);
 });
 
 Then('I should see the title', async function () {
