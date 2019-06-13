@@ -2,7 +2,7 @@ const assert = require('assert');
 import { Given, When, Then} from 'cucumber';
 import { GooglePage, MenuContentPage } from '../../page';
 
-const googlePage: GooglePage = new GooglePage();
+// const googlePage: GooglePage = new GooglePage();
 const menuContentPage: MenuContentPage = new MenuContentPage();
 
 Given('I go to {string}', async function (site) {
@@ -14,7 +14,7 @@ When('I check the title', async function () {
 });
 
 Then('I should see the title', async function () {
-  assert.equal(googlePage.checkTitle(), 'Google');
+  assert.equal(browser.getTitle(), 'Google');
 });
 
 When('I click the t-shirt menu', async function () {

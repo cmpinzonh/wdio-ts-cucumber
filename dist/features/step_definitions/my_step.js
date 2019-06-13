@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const assert = require('assert');
 const cucumber_1 = require("cucumber");
 const page_1 = require("../../page");
-const googlePage = new page_1.GooglePage();
+// const googlePage: GooglePage = new GooglePage();
 const menuContentPage = new page_1.MenuContentPage();
 cucumber_1.Given('I go to {string}', function (site) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -24,7 +24,7 @@ cucumber_1.When('I check the title', function () {
 });
 cucumber_1.Then('I should see the title', function () {
     return __awaiter(this, void 0, void 0, function* () {
-        assert.equal(googlePage.checkTitle(), 'Google');
+        assert.equal(browser.getTitle(), 'Google');
     });
 });
 cucumber_1.When('I click the t-shirt menu', function () {

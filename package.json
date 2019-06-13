@@ -4,10 +4,11 @@
   "description": "Provides examples of how to use TypeScript with the webdriver.io api. Tests executed against http://the-internet.herokuapp.com..",
   "main": "index.js",
   "scripts": {
-    "test": "wdio wdio.conf.js",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc",
+    "test": "npm run build && wdio wdio.conf.js",
     "lint": "tslint --fix src/**/*.ts",
-    "moveJsonFiles": "copyfiles -u 1 src/selectors/* src/config/* lib",
-    "build": "npm run lint && rimraf lib && npm run moveJsonFiles && tsc --outDir lib"
+    "moveJsonFiles": "copyfiles -u 1 src/selectors/* src/config/* lib"
   },
   "pre-commit": [
     "lint",
